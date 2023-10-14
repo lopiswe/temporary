@@ -1,12 +1,10 @@
 version: 2.1
- 
-orbs:
-  win: circleci/windows@2.2.0
- 
 jobs:
   build:
-    executor:
-      name: win/default
-      shell: cmd.exe
+    machine:
+      image: ubuntu-2004:202010-01
     steps:
-      - run: ls
+      - checkout
+      - run:
+          name: "Testing"
+          command: df -h
