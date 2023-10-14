@@ -9,4 +9,4 @@ jobs:
       name: win/default
       shell: cmd.exe
     steps:
-      - run: ls && df -h && free -h
+      - run: ls
